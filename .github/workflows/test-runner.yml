@@ -1,0 +1,23 @@
+name: Test GitHub Runner
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  test-runner:
+    runs-on: self-hosted  # 关键：指定使用自托管 Runner
+    steps:
+      - name: 检查 Runner 是否就绪
+        run: echo "GitHub Runner is working!"
+
+      - name: 打印系统信息
+        run: uname -a
+
+      - name: 检查当前用户
+        run: whoami
+
+      - name: 列出环境变量
+        run: env | grep GITHUB

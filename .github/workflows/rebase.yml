@@ -5,7 +5,7 @@ name: Automatic Rebase
 jobs:
   rebase:
     name: Rebase
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@master
     - name: Automatic Rebase

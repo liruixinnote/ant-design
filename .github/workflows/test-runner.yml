@@ -14,7 +14,8 @@ jobs:
         run: echo "GitHub Runner is working!"
 
       - name: 打印系统信息
-        run: terraform -v
+        run: |
+          terraform -v
 
       - name: 检查当前用户
         run: whoami

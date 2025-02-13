@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: 检查 Runner 是否就绪
         run: echo "GitHub Runner is working!"
-
+      - name: Git checkout
+        uses: actions/checkout@v3
       - name: 打印系统信息
         run: |
           terraform -v
